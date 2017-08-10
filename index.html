@@ -34,7 +34,10 @@
             type: 'scatter',
             data: {
                 datasets: [{
-                    label: 'Scatter Dataset',
+                    label: 'Daiginjo',
+                    fill: false,
+                    showLine: false,
+                    pointStyle: "circle",
                     data: [{
                         x: -10,
                         y: 0
@@ -45,7 +48,41 @@
                         x: 10,
                         y: 5
                     }]
-                }]
+                },
+                {
+                   label: 'Ginjo',
+                    fill: false,
+                    showLine: false,
+                    pointStyle: "circle",
+                    data: [{
+                        x: -10,
+                        y: 0
+                    }, {
+                        x: 0,
+                        y: 20
+                    }, {
+                        x: 10,
+                        y: 5
+                    }] 
+                },
+                {
+                   label: 'Futsushu',
+                    fill: false,
+                    showLine: false,
+                    pointStyle: "circle",
+                    data: [{
+                        x: -10,
+                        y: 0
+                    }, {
+                        x: 0,
+                        y: 15
+                    }, {
+                        x: 10,
+                        y: 5
+                    }] 
+                }
+                
+                ],
             },
             options: {
                 title: {
@@ -55,7 +92,19 @@
                 scales: {
                     xAxes: [{
                         type: 'linear',
-                        position: 'bottom'
+                        position: 'bottom',
+                        scaleLabel: {
+                            display: true,
+                            labelString: "Dry to Sweet"
+                        }
+                    }],
+                    yAxes: [{
+                        type: 'linear',
+                        position: 'left',
+                        scaleLabel: {
+                            display: true,
+                            labelString: "Heavy to Light Body"
+                        }
                     }]
                 },
                 legend: {
