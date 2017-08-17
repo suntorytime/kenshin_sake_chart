@@ -24,75 +24,67 @@
         <![endif]-->
 
     <!-- Add your site or application content here -->
-    <p>Hello world! This is HTML5 Boilerplate.</p>
+    <p>Kenshin Sake - Sake Index</p>
     <canvas id="myChart" width="400" height="400"></canvas>
 
     <!-- ChartJS -->
     <script>
-        var ctx = document.getElementById("myChart").getContext('2d');
+        var ctx = document.getElementById("myChart").getContext("2d");
+        Chart.defaults.global.elements.point.radius = 20;
+        Chart.defaults.global.elements.point.hoverRadius = 25;
         var scatterChart = new Chart(ctx, {
             type: 'scatter',
             data: {
                 datasets: [{
-                    label: 'Daiginjo',
-                    pointRadius: 4,
-                    borderWidth: 4,
-                    hoverRadius: 10,
-                    hoverBorderWidth: 10,
-                    fill: false,
-                    showLine: false,
-                    pointStyle: "circle",
+                    label: 'Tamanohikari Junmai Daiginjo',
+                    backgroundColor: "red",
                     data: [{
-                        x: -10,
-                        y: 0
-                    }, {
-                        x: 0,
+                        x: 20,
+                        y: 13
+                    }]
+                },
+                {
+                    label: 'Nambu Bijin Tokubetsu Junmai',
+                    backgroundColor: "yellow",
+                    data: [{
+                        x: 5,
                         y: 10
-                    }, {
-                        x: 10,
+                    }]
+                },
+                {
+                    label: 'Kikusui Junmai Ginjo',
+                    backgroundColor: "green",
+                    data: [{
+                        x: 13,
                         y: 5
                     }]
                 },
                 {
-                   label: 'Ginjo',
-                    fill: false,
-                    showLine: false,
-                    pointStyle: "circle",
+                    label: 'Kikusui Hiyaoroshi',
+                    backgroundColor: "orange",
                     data: [{
-                        x: -10,
-                        y: 0
-                    }, {
-                        x: 0,
-                        y: 20
-                    }, {
-                        x: 10,
-                        y: 5
-                    }] 
+                        x: 20,
+                        y: 30
+                    }]
                 },
                 {
-                   label: 'Futsushu',
-                    fill: false,
-                    showLine: false,
-                    pointStyle: "circle",
+                    label: 'Takara Sake Sparkling Mio',
+                    backgroundColor: "blue",
                     data: [{
-                        x: -10,
-                        y: 0
-                    }, {
-                        x: 0,
-                        y: 15
-                    }, {
-                        x: 10,
-                        y: 5
-                    }] 
-                }
-                
-                ],
+                        x: -40,
+                        y: -20
+                    }]
+                },
+                {
+                    label: 'Katoukichibee Shouten Born Gold',
+                    backgroundColor: "gold",
+                    data: [{
+                        x: -20,
+                        y: 30
+                    }]
+                }]
             },
             options: {
-                title: {
-                    display: true,
-                    text: "Kenshin Sake's World of Sake"
-                },
                 scales: {
                     xAxes: [{
                         type: 'linear',
@@ -111,20 +103,9 @@
                         }
                     }]
                 },
-                legend: {
-                    display: true
-                },
-                layout: {
-                    padding: {
-                        left: 50,
-                        right: 50,
-                        top: 50,
-                        bottom: 50
-                    }
-                }
             }
         });
-    </script>
+    </script>        
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script>
             window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')
