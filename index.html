@@ -30,8 +30,10 @@
     <!-- ChartJS -->
     <script>
         var ctx = document.getElementById("myChart").getContext("2d");
-        Chart.defaults.global.elements.point.radius = 20;
-        Chart.defaults.global.elements.point.hoverRadius = 25;
+        Chart.defaults.global.elements.point.radius = 10;
+        Chart.defaults.global.elements.point.hoverRadius = 15;
+        Chart.defaults.global.elements.point.borderWidth = 10;
+        Chart.defaults.global.elements.point.hitRadius = 10;
         var scatterChart = new Chart(ctx, {
             type: 'scatter',
             data: {
@@ -85,13 +87,18 @@
                 }]
             },
             options: {
+                legend: {
+                    position: "left"
+                },
                 scales: {
                     xAxes: [{
                         type: 'linear',
                         position: 'bottom',
                         scaleLabel: {
                             display: true,
-                            labelString: "Dry to Sweet"
+                            labelString: "Dry to Sweet",
+                            fontStyle: "bold",
+                            fontSize: 16
                         }
                     }],
                     yAxes: [{
@@ -99,7 +106,9 @@
                         position: 'left',
                         scaleLabel: {
                             display: true,
-                            labelString: "Heavy to Light Body"
+                            labelString: "Heavy to Light Body",
+                            fontStyle: "bold",
+                            fontSize: 16
                         }
                     }]
                 },
